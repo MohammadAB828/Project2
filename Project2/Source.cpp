@@ -167,23 +167,22 @@ int main()
 						if (temp85 == j + 1) {
 							system("cls");
 						join:
-							int k =1;
+							
 							for (i = 0; student_class[i] != temp2; i++) {
 								cout << i + 1 << "." << student_class[i]["name"].asString() << endl;
-								k++;
 							}
-							cout << k << ". Back \n";
-							int E;
-							cin >> E;
-							if ( E == k)
-								goto student;
+							cout << i+1 << ".Back \n";
 							int new_temp;
 							cin >> new_temp;
-							if (student_class[new_temp - 1]["capacity"] != 0) {
+							if (new_temp == i + 1) {
+								goto student;
+							}
+							else if (student_class[new_temp - 1]["capacity"] != 0) {
 
 								for (int k = student_class[new_temp - 1]["static_capacity"].asInt() - 1; k >= 0; k--) {
 									if (student_class[new_temp - 1]["student_id"][k].asString() == json_object["id"].asString()) {
 										cout << "You already joined this class" << endl;
+										system("cls");
 										goto join;
 										j++;
 									}
@@ -229,7 +228,7 @@ int main()
 								Json::Reader r;
 								r.parse(file, homework);
 								Json::Value temp21;
-								string xxx;
+								//string xxx;
 								int i, j = 0;
 								for (i = 0; student_class[i] != temp2; i++) {
 									for (int k = student_class[i]["static_capacity"].asInt() - 1; k >= 0; k--) {
@@ -251,18 +250,19 @@ int main()
 									goto url;
 								}
 								else {
-									cout << "The name of the homework : " << homework[temp855]["name"] << endl << endl << endl;
-									cout << "The main text of the homework : " << endl << homework[temp855]["message"].asString() << endl << endl << endl;
-									cout << "The dead line of the homework : " << homework[temp855]["dead_line"].asString() << endl << endl << endl;
+									cout << "The name of the homework : " << homework[temp855-1]["name"] << endl << endl << endl;
+									cout << "The main text of the homework : " << endl << homework[temp855-1]["message"].asString() << endl << endl << endl;
+									cout << "The dead line of the homework : " << homework[temp855-1]["dead_line"].asString() << endl << endl << endl;
 									cout << "press any buttom to go back" << endl;
 									char s;
 									cin >> s;
-
+									system("cls");
 									goto homeworky;
 								}
 							}
 							else {
 							notify:
+								system("cls");
 								cout << "Your Notification's : \n";
 								ifstream file("notification.json");
 								Json::Value notification;
@@ -291,11 +291,12 @@ int main()
 									goto url;
 								}
 								else {
-									cout << "The name of the notification : " << notification[temp855]["name"] << endl << endl << endl;
-									cout << "The main text of the notification : " << endl << notification[temp855]["message"].asString() << endl << endl << endl;
+									cout << "The name of the notification : " << notification[temp855-1]["name"] << endl << endl << endl;
+									cout << "The main text of the notification : " << endl << notification[temp855-1]["message"].asString() << endl << endl << endl;
 									cout << "press 0 buttom to go back" << endl;
 									char s;
 									cin >> s;
+									system("cls");
 									goto notify;
 								}
 							}

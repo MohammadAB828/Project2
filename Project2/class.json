@@ -1,49 +1,23 @@
 [
-
-{
-	"capacity" : 5,
-	"name" : "AP",
-	"static_capacity" : 5,
-	"student_id" : 
-	[
-		null,
-		null,
-		null,
-		null,
-		null,
-		null
-	],
-	"teacher_id" : "2"
-}
-,{
-	"capacity" : 9,
-	"name" : "Kamp",
-	"static_capacity" : 9,
-	"student_id" : 
-	[
-		null,
-		null,
-		null,
-		null,
-		null,
-		null,
-		null,
-		null,
-		null,
-		null
-	],
-	"teacher_id" : "363"
-}
-,{
-	"capacity" : 2,
-	"name" : "Kamlll",
-	"static_capacity" : 2,
-	"student_id" : 
-	[
-		null,
-		null,
-		null
-	],
-	"teacher_id" : "222"
-}
+   {
+      "capacity" : 4,
+      "name" : "AP",
+      "static_capacity" : 5,
+      "student_id" : [ null, null, null, null, "40126563", null ],
+      "teacher_id" : "2"
+   },
+   {
+      "capacity" : 8,
+      "name" : "Kamp",
+      "static_capacity" : 9,
+      "student_id" : [ null, null, null, null, null, null, null, null, "40126563", null ],
+      "teacher_id" : "363"
+   },
+   {
+      "capacity" : 1,
+      "name" : "Kamlll",
+      "static_capacity" : 2,
+      "student_id" : [ null, "40126563", null ],
+      "teacher_id" : "222"
+   }
 ]
