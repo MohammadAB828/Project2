@@ -303,6 +303,30 @@ int main()
 				}
 			}
 
+			case 2 :
+			{
+				system("cls");
+				int temp;
+				cout << "1.Teacher\n2.Student\n3.Back\n";
+				cin >> temp;
+				if (temp == 1) {
+					system("cls");
+					Teacher teacher;
+					cin >> teacher;
+
+
+				}
+				else if (temp == 2) {
+					system("cls");
+					Student student;
+					cin >> student;
+
+				}
+				else {
+					goto menu;
+				}
+			}
+
 			default:
 				goto menu;
 				break;
