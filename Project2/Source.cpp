@@ -1,5 +1,6 @@
 #include <limits>
 #include "Header.h"
+#include "Header.cpp"
 
 int main()
 {
@@ -22,7 +23,7 @@ int main()
 				cout << "Good Luck";
 				Sleep(3000);
 				system("cls");
-				break;
+				return 0;
 			}
 
 			case 1:

@@ -1,3 +1,6 @@
+#ifndef Head_H
+#define Head_H
+
 #include <iostream>
 #include <stdlib.h>
 #include <Windows.h>
@@ -175,3 +178,6 @@ Json::Value get_all_class(string file_name) {
 	return x;
 }
 
+/////////////
+
+#endif
