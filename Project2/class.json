@@ -1,3 +1,18 @@
 [
 
+{
+	"capacity" : 5,
+	"name" : "AP",
+	"static_capacity" : 5,
+	"student_id" : 
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"teacher_id" : "2"
+}
 ]

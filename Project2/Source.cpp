@@ -167,9 +167,16 @@ int main()
 						if (temp85 == j + 1) {
 							system("cls");
 						join:
+							int k =1;
 							for (i = 0; student_class[i] != temp2; i++) {
 								cout << i + 1 << "." << student_class[i]["name"].asString() << endl;
+								k++;
 							}
+							cout << k << ". Back \n";
+							int E;
+							cin >> E;
+							if ( E == k)
+								goto student;
 							int new_temp;
 							cin >> new_temp;
 							if (student_class[new_temp - 1]["capacity"] != 0) {
