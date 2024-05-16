@@ -124,3 +124,22 @@ void delete_last_line(string file_name) {
 
 }
 
+
+void write_object(Json::Value y, string file_name) {
+
+	Json::StreamWriterBuilder builder;
+	string json_str = Json::writeString(builder, y);
+
+	ofstream file(file_name, ios::app);
+	if (file.is_open()) {
+		file << "," << json_str << endl << "]";
+		file.close();
+		std::cout << "your information saved successfully" << std::endl;
+	}
+	else {
+		std::cerr << "error from database" << std::endl;
+	}
+
+	Sleep(3000);
+}
+
