@@ -67,6 +67,15 @@ Taklif::~Taklif()
 {
 }
 
+//////
+
+notif::notif()
+{
+}
+
+notif::~notif()
+{
+}
 
 
 

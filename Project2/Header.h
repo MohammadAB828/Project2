@@ -59,3 +59,15 @@ public:
 	string dead_line;
 	string mohtava;
 };
+
+
+
+
+class notif
+{
+public:
+	string name;
+	notif();
+	~notif();
+	string mohtava;
+};
