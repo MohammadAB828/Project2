@@ -56,4 +56,17 @@ Student::~Student()
 
 }
 
+/////
+
+
+Taklif::Taklif()
+{
+}
+
+Taklif::~Taklif()
+{
+}
+
+
+
 

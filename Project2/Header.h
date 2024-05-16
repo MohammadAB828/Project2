@@ -47,3 +47,15 @@ private:
 
 	string major;
 };
+
+
+
+class Taklif
+{
+public:
+	Taklif();
+	~Taklif();
+	string name;
+	string dead_line;
+	string mohtava;
+};
