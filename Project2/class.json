@@ -15,4 +15,35 @@
 	],
 	"teacher_id" : "2"
 }
+,{
+	"capacity" : 9,
+	"name" : "Kamp",
+	"static_capacity" : 9,
+	"student_id" : 
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"teacher_id" : "363"
+}
+,{
+	"capacity" : 2,
+	"name" : "Kamlll",
+	"static_capacity" : 2,
+	"student_id" : 
+	[
+		null,
+		null,
+		null
+	],
+	"teacher_id" : "222"
+}
 ]
