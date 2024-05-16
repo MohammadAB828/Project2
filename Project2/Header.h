@@ -1,5 +1,6 @@
 #ifndef Head_H
 #define Head_H
+#pragma
 
 #include <iostream>
 #include <stdlib.h>
@@ -8,6 +9,8 @@
 #include "json/json.h"
 #include <string.h>
 using namespace std;
+
+
 
 class Person
 {
@@ -86,98 +89,19 @@ public:
 	Student student[100];
 	int zarfiat;
 	int capacity;
-	friend istream& operator>>(istream&, Dars&);
+	friend istream& operator >> (istream& input, Dars& obj);
 };
 
+void delete_last_line(string file_name);
 
+void write_object(Json::Value y, string file_name);
 
-void delete_last_line(string file_name) {
-	std::string filename = file_name;
+Json::Value find_or_fail(string file_name);
 
-
-	std::ifstream inputFile(filename);
-	if (!inputFile.is_open()) {
-		std::cerr << "Unable to open input file" << std::endl;
-
-	}
-
-	std::vector<std::string> lines;
-	std::string line;
-
-
-	while (std::getline(inputFile, line)) {
-		lines.push_back(line);
-	}
-
-	inputFile.close();
-
-
-	std::ofstream outputFile(filename);
-	if (!outputFile.is_open()) {
-		std::cerr << "Unable to open output file" << std::endl;
-
-	}
-
-
-	for (size_t i = 0; i < lines.size() - 1; ++i) {
-		outputFile << lines[i] << std::endl;
-	}
-
-	outputFile.close();
-
-}
-
-
-void write_object(Json::Value y, string file_name) {
-
-	Json::StreamWriterBuilder builder;
-	string json_str = Json::writeString(builder, y);
-
-	ofstream file(file_name, ios::app);
-	if (file.is_open()) {
-		file << "," << json_str << endl << "]";
-		file.close();
-		std::cout << "your information saved successfully" << std::endl;
-	}
-	else {
-		std::cerr << "error from database" << std::endl;
-	}
-
-	Sleep(3000);
-}
-
-
-Json::Value find_or_fail(string file_name) {
-	string id, password;
-	cout << "id : ";
-	cin >> id;
-	cout << "password : ";
-	cin >> password;
-	ifstream file(file_name);
-	Json::Value x;
-	Json::Reader r;
-	r.parse(file, x);
-	Json::Value temp;
-	for (int i = 0; x[i] != temp; i++) {
-		if (x[i]["id"] == id && x[i]["password"] == password) {
-			return x[i];
-		}
-	}
-	cout << "The id or Password is incorrect";
-	Sleep(3000);
-	system("cls");
-	return NULL;
-}
-
-
-Json::Value get_all_class(string file_name) {
-	ifstream file(file_name);
-	Json::Value x;
-	Json::Reader r;
-	r.parse(file, x);
-	return x;
-}
+Json::Value get_all_class(string file_name);
 
 /////////////
+
+
 
 #endif
