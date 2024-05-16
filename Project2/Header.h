@@ -71,7 +71,6 @@ public:
 };
 
 
-
 class Dars
 {
 public:
@@ -86,4 +85,42 @@ public:
 	int capacity;
 	friend istream& operator>>(istream&, Dars&);
 };
+
+
+
+void delete_last_line(string file_name) {
+	std::string filename = file_name;
+
+
+	std::ifstream inputFile(filename);
+	if (!inputFile.is_open()) {
+		std::cerr << "Unable to open input file" << std::endl;
+
+	}
+
+	std::vector<std::string> lines;
+	std::string line;
+
+
+	while (std::getline(inputFile, line)) {
+		lines.push_back(line);
+	}
+
+	inputFile.close();
+
+
+	std::ofstream outputFile(filename);
+	if (!outputFile.is_open()) {
+		std::cerr << "Unable to open output file" << std::endl;
+
+	}
+
+
+	for (size_t i = 0; i < lines.size() - 1; ++i) {
+		outputFile << lines[i] << std::endl;
+	}
+
+	outputFile.close();
+
+}
 
