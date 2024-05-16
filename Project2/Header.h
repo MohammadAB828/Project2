@@ -143,3 +143,35 @@ void write_object(Json::Value y, string file_name) {
 	Sleep(3000);
 }
 
+
+Json::Value find_or_fail(string file_name) {
+	string id, password;
+	cout << "id : ";
+	cin >> id;
+	cout << "password : ";
+	cin >> password;
+	ifstream file(file_name);
+	Json::Value x;
+	Json::Reader r;
+	r.parse(file, x);
+	Json::Value temp;
+	for (int i = 0; x[i] != temp; i++) {
+		if (x[i]["id"] == id && x[i]["password"] == password) {
+			return x[i];
+		}
+	}
+	cout << "The id or Password is incorrect";
+	Sleep(3000);
+	system("cls");
+	return NULL;
+}
+
+
+Json::Value get_all_class(string file_name) {
+	ifstream file(file_name);
+	Json::Value x;
+	Json::Reader r;
+	r.parse(file, x);
+	return x;
+}
+
