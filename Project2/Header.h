@@ -61,8 +61,6 @@ public:
 };
 
 
-
-
 class notif
 {
 public:
@@ -71,3 +69,21 @@ public:
 	~notif();
 	string mohtava;
 };
+
+
+
+class Dars
+{
+public:
+	Dars();
+	~Dars();
+	string name;
+	Taklif taklif[10];
+	notif notification[10];
+	Teacher teacher;
+	Student student[100];
+	int zarfiat;
+	int capacity;
+	friend istream& operator>>(istream&, Dars&);
+};
+
