@@ -34,3 +34,16 @@ public:
 private:
 
 };
+
+
+class Student :public Person
+{
+public:
+	Student();
+	~Student();
+	friend istream& operator >> (istream& input, Student& obj);
+
+private:
+
+	string major;
+};

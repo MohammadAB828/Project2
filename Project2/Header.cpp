@@ -42,3 +42,18 @@ Teacher::~Teacher()
 {
 }
 
+
+//////
+
+
+Student::Student()
+{
+	is_admin = false;
+}
+
+Student::~Student()
+{
+
+}
+
+
