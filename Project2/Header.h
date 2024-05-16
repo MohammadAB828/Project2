@@ -22,3 +22,15 @@ public:
 	string get_id();
 	string get_password();
 };
+
+
+class Teacher :public Person
+{
+public:
+	Teacher();
+	~Teacher();
+	friend istream& operator >> (istream& input, Teacher& obj);
+
+private:
+
+};

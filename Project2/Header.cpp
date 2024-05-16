@@ -30,4 +30,15 @@ string Person::get_password()
 	return password;
 }
 
+///////
+
+
+Teacher::Teacher()
+{
+	is_admin = true;
+}
+
+Teacher::~Teacher()
+{
+}
 
