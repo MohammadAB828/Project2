@@ -190,6 +190,37 @@ Dars::~Dars()
 {
 }
 
+
+inline istream& operator>>(istream& input, Dars& obj)
+{
+	string name, id;
+	int zarf;
+	cout << "Enter your id : ";
+	input >> id;
+	cout << "Enter the name of the class : ";
+	input >> obj.name;
+	cout << "Enter the capacity : ";
+	input >> zarf;
+
+
+
+	delete_last_line("class.json");
+
+	//write
+	Json::Value x, y;
+	x["name"] = obj.name;
+	x["capacity"] = zarf;
+	x["static_capacity"] = zarf;
+	x["teacher_id"] = id;
+	x["student_id"][zarf];
+	y = x;
+
+	write_object(y, "class.json");
+
+	return input;
+}
+
+
 ///
 
 
