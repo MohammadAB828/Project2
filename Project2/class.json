@@ -19,5 +19,12 @@
       "static_capacity" : 2,
       "student_id" : [ null, "40126563", null ],
       "teacher_id" : "222"
+   },
+   {
+      "capacity" : 8,
+      "name" : "DP",
+      "static_capacity" : 9,
+      "student_id" : [ null, null, null, null, null, null, null, null, "40126563", null ],
+      "teacher_id" : "363"
    }
 ]
